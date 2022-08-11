@@ -1,0 +1,39 @@
+{% extends 'songs/layout.html' %}
+{% block title %} Editor de Tareas {% endblock %}
+{% block content %}
+
+
+<div class="row">
+	<div class="col-md-4 offset-md-4 text-center">
+		<h2>Add Songs</h2>
+		<div class="card">
+	<div class="card-body" style="background-color:#5662E3">
+
+
+	<form action="" method="POST">
+
+        {% csrf_token %}
+		<div class="form-group">
+			<label for="id_tittle"><h5 style="color:#FAAF00">Tittle:</h5></label>
+			<input type="text" name="tittle" maxlength="100000" required="" id="id_tittle" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="id_artist"><h5 style="color:#FAAF00">Artist:</h5></label>
+			<input type="text" name="artist" maxlength="100" required="" id="id_artist" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="id_year"><h5 style="color:#FAAF00">Year:</h5></label>
+			<input type="text" name="year" maxlength="100" required="" id="id_year" class="form-control">
+		</div>
+        <div class="form-group">
+			<label for="id_genre"><h5 style="color:#FAAF00">Genre:</h5></label>
+			<input type="text" name="genre" maxlength="100" required="" id="id_genre" class="form-control">
+		</div>
+        <br />
+		<div class="d-grid gap-2">
+			<button style="background-color:#E09D00"><h5 style="color:#ffff">Agregar datos</h5></button>
+		</div>
+	</form>
+
+
+{% endblock %} 
